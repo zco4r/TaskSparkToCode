@@ -1,0 +1,14 @@
+/Users/ammaralazki/RiderProjects/task/task/bin/Debug/net10.0/task
+/Users/ammaralazki/RiderProjects/task/task/bin/Debug/net10.0/task.deps.json
+/Users/ammaralazki/RiderProjects/task/task/bin/Debug/net10.0/task.runtimeconfig.json
+/Users/ammaralazki/RiderProjects/task/task/bin/Debug/net10.0/task.dll
+/Users/ammaralazki/RiderProjects/task/task/bin/Debug/net10.0/task.pdb
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.AssemblyInfoInputs.cache
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.AssemblyInfo.cs
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.csproj.CoreCompileInputs.cache
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.dll
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/refint/task.dll
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.pdb
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/task.genruntimeconfig.cache
+/Users/ammaralazki/RiderProjects/task/task/obj/Debug/net10.0/ref/task.dll
