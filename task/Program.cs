@@ -441,6 +441,67 @@
             }
         
         }
+        
+
+        class UniversityAdmission
+        {
+            static void MAIN()
+            {
+                Console.WriteLine("--- University Admission Decision ---");
+
+                Console.Write("Enter program type ('S' for Science, 'A' for Arts): ");
+                char programType = Convert.ToChar(Console.ReadLine().ToUpper());
+
+                Console.Write("Enter GPA (out of 4.0): ");
+                double gpa = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Enter entrance exam score (out of 100): ");
+                double examScore = Convert.ToDouble(Console.ReadLine());
+
+                Console.Write("Do you have an extracurricular achievement? (yes/no): ");
+                string hasAchievement = Console.ReadLine().ToLower();
+
+                bool isEligible = false;
+                bool isValidType = true;
+
+                switch (programType)
+                {
+                    case 'S':
+                        if (gpa >= 3.0 && examScore >= 75)
+                            isEligible = true;
+                        break;
+                    case 'A':
+                        if (gpa >= 2.5 && examScore >= 60)
+                            isEligible = true;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid program type");
+                        isValidType = false;
+                        break;
+                }
+
+                if (isValidType)
+                {
+                    string decision;
+                    if (isEligible)
+                    {
+                        decision = "Admitted";
+                    }
+                    else if (hasAchievement == "yes")
+                    {
+                        decision = "Conditionally Admitted";
+                    }
+                    else
+                    {
+                        decision = "Not Admitted";
+                    }
+
+                    Console.WriteLine($"Program Type: {programType}");
+                    Console.WriteLine($"Decision: {decision}");
+                }
+            }
+        }
+
     }
 
 
