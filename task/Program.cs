@@ -297,9 +297,59 @@
                     Console.WriteLine("- Has an existing loan.");
                 }
             }
-              
-
+            //Task-12-----------------------------------------------------
+            //Shipping Cost CalculatorShipping Cost Calculator------------
             
+            Console.Write("Enter region code (A, B, or C): ");
+            char region = Convert.ToChar(Console.ReadLine().ToUpper());
+
+            Console.Write("Enter package weight (in kg): ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+
+            double baseCost = 0;
+            double extraCharge = 0;
+            bool isvalid = true;
+
+            switch (region)
+            {
+                case 'A':
+                    baseCost = 1.000;
+                    break;
+                case 'B':
+                    baseCost = 3.000;
+                    break;
+                case 'C':
+                    baseCost = 7.000;
+                    break;
+                default:
+                    Console.WriteLine("Invalid region");
+                    isValid = false;
+                    break;
+            }
+
+            if (isvalid)
+            {
+                if (weight > 10)
+                {
+                    extraCharge = 5.000;
+                }
+                else if (weight > 5)
+                {
+                    extraCharge = 2.000;
+                }
+                else
+                {
+                    extraCharge = 0;
+                }
+
+                double totalCost = baseCost + extraCharge;
+
+                Console.WriteLine($"Base cost: {baseCost:F3} OMR");
+                Console.WriteLine($"Extra charge: {extraCharge:F3} OMR");
+                Console.WriteLine($"Total shipping cost: {totalCost:F3} OMR");
+            }
         }
+        
+ 
     }
 }
