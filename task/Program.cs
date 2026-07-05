@@ -350,6 +350,40 @@
             }
         }
         
+        class TriangleTypeClassifier
+        {
+            static void MAin()
+            {
+                Console.Write("Enter length of side 1: ");
+                double a = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter length of side 2: ");
+                double b = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter length of side 3: ");
+                double c = Convert.ToDouble(Console.ReadLine());
+
+                if ((a + b > c) && (a + c > b) && (b + c > a))
+                {
+                    if (a == b && b == c)
+                    {
+                        Console.WriteLine("Triangle type: Equilateral (all sides equal)");
+                    }
+                    else if (a == b || a == c || b == c)
+                    {
+                        Console.WriteLine("Triangle type: Isosceles (exactly two sides equal)");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Triangle type: Scalene (all sides different)");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Invalid triangle: The sides provided do not form a valid triangle.");
+                }
+            }
+        }
+
+        
  
     }
 }
