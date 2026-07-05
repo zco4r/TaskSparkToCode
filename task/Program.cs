@@ -382,8 +382,68 @@
                 }
             }
         }
+        //Task-14-----------------------------------------------------------------
+        //Online Store Checkout---------------------------------------------------
+        
+        
+        static void MAin(string[] args)
+        {
+            
+            Console.WriteLine("\n--- Task 14: Online Store Checkout ---");
+
+            Console.Write("Enter product code (1: Headphones, 2: Keyboard, 3: Mouse): ");
+            int productCode = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter quantity: ");
+            int quantity = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Do you have a discount coupon? (yes/no): ");
+            string hasCoupon = Console.ReadLine();
+
+            double unitPrice = 0;
+            bool isValidCode = true;
+
+            switch (productCode)
+            {
+                case 1:
+                    unitPrice = 8.500;
+                    break;
+                case 2:
+                    unitPrice = 12.000;
+                    break;
+                case 3:
+                    unitPrice = 5.000;
+                    break;
+                default:
+                    Console.WriteLine("Invalid product code");
+                    isValidCode = false;
+                    break;
+            }
+
+            if (isValidCode)
+            {
+                double subtotal = unitPrice * quantity;
+                double discountAmount = 0;
+
+                if (hasCoupon == "yes" && subtotal > 20)
+                {
+                    discountAmount = subtotal * 0.10;
+                }
+
+                double amountAfterDiscount = subtotal - discountAmount;
+                double taxAmount = amountAfterDiscount * 0.05;
+                double finalTotal = amountAfterDiscount + taxAmount;
+
+                Console.WriteLine($"Subtotal: {subtotal:F3} OMR");
+                Console.WriteLine($"Discount amount: {discountAmount:F3} OMR");
+                Console.WriteLine($"Tax amount: {taxAmount:F3} OMR");
+                Console.WriteLine($"Final total: {finalTotal:F3} OMR");
+            }
+        
+        }
+    }
+
 
         
  
-    }
 }
