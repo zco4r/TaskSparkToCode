@@ -263,6 +263,41 @@
             {
                 Console.WriteLine($"Result: {result}");
             }
+            
+            //Task-11----------------------------------------------------------
+            //Loan Eligibility System------------------------------------------
+
+            Console.Write("Enter your age: ");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter your monthly income (OMR): ");
+            double income = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Do you have an existing loan? (yes/no): ");
+            string hasLoan = Console.ReadLine();
+
+            if (age >= 21 && age <= 60 && income >= 400 && hasLoan == "no")
+            {
+                Console.WriteLine("Congratulations! You are eligible for the loan.");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, you are not eligible for the following reason(s):");
+            
+                if (age < 21 || age > 60)
+                {
+                    Console.WriteLine("- Age out of range.");
+                }
+                if (income < 400)
+                {
+                    Console.WriteLine("- Income too low.");
+                }
+                if (hasLoan == "yes")
+                {
+                    Console.WriteLine("- Has an existing loan.");
+                }
+            }
+              
 
             
         }
