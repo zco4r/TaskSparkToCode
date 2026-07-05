@@ -267,8 +267,8 @@
             //Task-11----------------------------------------------------------
             //Loan Eligibility System------------------------------------------
 
-            Console.Write("Enter your age: ");
-            int age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter your AgE: ");
+            int AgE = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Enter your monthly income (OMR): ");
             double income = Convert.ToDouble(Console.ReadLine());
@@ -276,7 +276,7 @@
             Console.Write("Do you have an existing loan? (yes/no): ");
             string hasLoan = Console.ReadLine();
 
-            if (age >= 21 && age <= 60 && income >= 400 && hasLoan == "no")
+            if (AgE >= 21 && AgE <= 60 && income >= 400 && hasLoan == "no")
             {
                 Console.WriteLine("Congratulations! You are eligible for the loan.");
             }
@@ -284,7 +284,7 @@
             {
                 Console.WriteLine("Sorry, you are not eligible for the following reason(s):");
             
-                if (age < 21 || age > 60)
+                if (AgE < 21 || AgE > 60)
                 {
                     Console.WriteLine("- Age out of range.");
                 }
