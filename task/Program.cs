@@ -20,8 +20,8 @@
             Console.WriteLine();
 
           
-        // TASK -2--------------------------------------------------------------
-        //Rectangle Calculator--------------------------------------------------
+            // TASK -2--------------------------------------------------------------
+            //Rectangle Calculator--------------------------------------------------
             Console.Write("Enter the length of the rectangle: ");
             double length = double.Parse(Console.ReadLine());
 
@@ -95,10 +95,83 @@
                     Console.WriteLine("Invalid grade");
                     break;
             }
-
-
-
+            //Task-6------------------------------------------------------------------------
+            //Safe Division Calculator------------------------------------------------------
             
+            Console.Write("Enter temperature in Celsius: ");
+            double celsius = Convert.ToDouble(Console.ReadLine());
+
+            double fahrenheit = (celsius * 9 / 5) + 32;
+
+            string classification;
+            if (celsius < 10)
+            {
+                classification = "Cold";
+            }
+            else if (celsius >= 10 && celsius <= 30)
+            {
+                classification = "Mild";
+            }
+            else
+            {
+                classification = "Hot";
+            }
+
+            Console.WriteLine($"Fahrenheit: {fahrenheit}");
+            Console.WriteLine($"Weather classification: {classification}");
+            
+            //Task-7------------------------------------------------------------
+            //Movie Ticket Pricing----------------------------------------------
+
+            Console.Write("Enter your age: ");
+            int AGE = Convert.ToInt32(Console.ReadLine());
+
+            string category;
+            double price;
+
+            if (AGE >= 0 && age <= 12)
+            {
+                category = "Children";
+                price = 2.000;
+            }
+            else if (AGE >= 13 && age <= 59)
+            {
+                category = "Adults";
+                price = 5.000;
+            }
+            else
+            {
+                category = "Seniors";
+                price = 3.000;
+            }
+
+            Console.WriteLine($"Category: {category}");
+            Console.WriteLine($"Ticket Price: {price:F3} OMR");
+            
+            //Task-8---------------------------------------------------
+            //Restaurant Bill with Membership Discount-----------------
+
+            Console.Write("Enter the total bill amount: ");
+            double billAmount = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Are you a loyalty member? (yes/no): ");
+            string isMember = Console.ReadLine();
+
+            double discount = 0;
+
+            if (billAmount > 20 && isMember == "yes")
+            {
+                discount = billAmount * 0.15;
+            }
+
+            double finalAmount = billAmount - discount;
+
+            Console.WriteLine($"Original bill: {billAmount:F3} OMR");
+            Console.WriteLine($"Discount amount: {discount:F3} OMR");
+            Console.WriteLine($"Final amount to pay: {finalAmount:F3} OMR");
+            
+                
+
         }
     }
 }
