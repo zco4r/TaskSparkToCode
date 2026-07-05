@@ -498,6 +498,7 @@
 
                     Console.WriteLine($"Program Type: {programType}");
                     Console.WriteLine($"Decision: {decision}");
+                    
                 }
             }
         }
