@@ -148,7 +148,7 @@
             Console.WriteLine($"Category: {category}");
             Console.WriteLine($"Ticket Price: {price:F3} OMR");
             
-            //Task-8--------------------------------------------------
+            //Task-8-------------------------------------------------
             //Restaurant Bill with Membership Discount----------------
 
             Console.Write("Enter the total bill amount: ");
